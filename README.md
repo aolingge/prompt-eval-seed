@@ -14,6 +14,10 @@
   <img alt="license" src="https://img.shields.io/badge/license-MIT-2563EB">
 </p>
 
+<p align="center">
+  <img src="assets/cli-preview.svg" alt="Prompt Eval Seed CLI preview" width="88%">
+</p>
+
 ## Why This Exists
 
 AI agent tooling is growing quickly, but many repos still miss tiny checks that can run locally or in CI. This project stays zero-dependency, short-command, and easy to fork.
@@ -68,6 +72,10 @@ npx github:aolingge/prompt-eval-seed --path fixtures/good.txt --sarif > results.
 ```
 
 See [docs/github-actions.md](docs/github-actions.md).
+
+## Visual Identity
+
+The banner and CLI preview are SVG assets committed in `assets/`, so the README renders cleanly on GitHub and Gitee without external image hosting.
 
 ## Mirrors
 

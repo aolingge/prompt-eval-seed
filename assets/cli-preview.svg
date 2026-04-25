@@ -1,0 +1,16 @@
+<svg width="980" height="430" viewBox="0 0 980 430" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="980" height="430" rx="22" fill="#0B1020"/>
+  <rect x="34" y="34" width="912" height="362" rx="18" fill="#111827" stroke="#334155"/>
+  <circle cx="72" cy="68" r="7" fill="#EF4444"/>
+  <circle cx="96" cy="68" r="7" fill="#F59E0B"/>
+  <circle cx="120" cy="68" r="7" fill="#22C55E"/>
+  <rect x="62" y="104" width="856" height="52" rx="12" fill="#4D7C0F" opacity=".9"/>
+  <text x="84" y="138" fill="#ECFCCB" font-family="JetBrains Mono,Consolas,monospace" font-size="20">npx github:aolingge/prompt-eval-seed --path eval.yml</text>
+  <text x="72" y="206" fill="#84CC16" font-family="JetBrains Mono,Consolas,monospace" font-size="22">Prompt Eval Seed score: 100/100</text>
+  <text x="72" y="258" fill="#22C55E" font-family="JetBrains Mono,Consolas,monospace" font-size="19">PASS</text>
+  <text x="154" y="258" fill="#E5E7EB" font-family="JetBrains Mono,Consolas,monospace" font-size="19">required signal found</text>
+  <text x="72" y="304" fill="#22C55E" font-family="JetBrains Mono,Consolas,monospace" font-size="19">PASS</text>
+  <text x="154" y="304" fill="#E5E7EB" font-family="JetBrains Mono,Consolas,monospace" font-size="19">CI-friendly report ready</text>
+  <text x="72" y="350" fill="#F59E0B" font-family="JetBrains Mono,Consolas,monospace" font-size="19">WARN</text>
+  <text x="154" y="350" fill="#E5E7EB" font-family="JetBrains Mono,Consolas,monospace" font-size="19">use --sarif or --annotations in automation</text>
+</svg>

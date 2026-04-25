@@ -14,6 +14,10 @@
   <img alt="license" src="https://img.shields.io/badge/license-MIT-2563EB">
 </p>
 
+<p align="center">
+  <img src="assets/cli-preview.svg" alt="Prompt Eval Seed CLI preview" width="88%">
+</p>
+
 ## 为什么做这个
 
 AI Agent 工具链正在快速增长，但很多仓库缺少能直接放进 CI 或本地预检的小工具。这个项目保持零依赖、命令短、输出清楚，适合被收藏、fork、二次改造。
