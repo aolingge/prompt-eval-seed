@@ -1,34 +1,67 @@
 <svg width="1280" height="520" viewBox="0 0 1280 520" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1280" height="520" rx="0" fill="#0B1020"/>
-  <path d="M0 380C154 305 298 318 440 368C617 431 759 447 924 365C1054 300 1163 292 1280 326V520H0V380Z" fill="#4D7C0F" opacity=".42"/>
-  <path d="M0 112C171 168 323 165 506 99C675 38 809 42 970 107C1086 154 1173 159 1280 122" stroke="#84CC16" stroke-width="3" opacity=".28"/>
-  <path d="M0 158C188 224 354 224 546 154C699 98 830 99 984 163C1098 211 1185 219 1280 190" stroke="#ECFCCB" stroke-width="2" opacity=".25"/>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#080B12"/>
+      <stop offset=".55" stop-color="#0E1424"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(210 70) rotate(28) scale(560 260)">
+      <stop stop-color="#0284C7" stop-opacity=".38"/>
+      <stop offset="1" stop-color="#0284C7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1120 430) rotate(160) scale(520 250)">
+      <stop stop-color="#0EA5E9" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#0EA5E9" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="44" y="66" width="1192" height="404" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="30" stdDeviation="34" flood-color="#000000" flood-opacity=".38"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="520" fill="url(#bg)"/>
+  <rect width="1280" height="520" fill="url(#glowA)"/>
+  <rect width="1280" height="520" fill="url(#glowB)"/>
+  <path d="M0 106h1280M0 206h1280M0 306h1280M0 406h1280M160 0v520M320 0v520M480 0v520M640 0v520M800 0v520M960 0v520M1120 0v520" stroke="#94A3B8" stroke-opacity=".08"/>
+  <path d="M94 390C256 298 438 286 610 352C782 418 942 396 1186 260" stroke="#BAE6FD" stroke-width="2" stroke-opacity=".22"/>
 
-  <rect x="64" y="58" width="1152" height="404" rx="28" fill="#F8FAFC"/>
-  <rect x="96" y="90" width="1088" height="340" rx="22" fill="#FFFFFF" stroke="#E5E7EB"/>
-
-  <rect x="134" y="132" width="452" height="230" rx="18" fill="#111827"/>
-  <circle cx="168" cy="166" r="8" fill="#EF4444"/>
-  <circle cx="194" cy="166" r="8" fill="#F59E0B"/>
-  <circle cx="220" cy="166" r="8" fill="#22C55E"/>
-  <text x="166" y="220" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="30" font-weight="800">Prompt Eval Seed</text>
-  <text x="166" y="260" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17">Check prompt regression seed files for inputs, expected output, failure cases, and safety...</text>
-  <rect x="166" y="304" width="118" height="36" rx="18" fill="#84CC16"/>
-  <text x="190" y="328" fill="#0B1020" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="800">v0.1.1</text>
-  <rect x="300" y="304" width="132" height="36" rx="18" fill="#1F2937"/>
-  <text x="323" y="328" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700">zero deps</text>
-
-  <g transform="translate(654 125)">
-    <rect width="430" height="250" rx="18" fill="#F8FAFC" stroke="#CBD5E1"/>
-    <rect x="28" y="28" width="374" height="44" rx="12" fill="#ECFCCB"/>
-    <text x="48" y="57" fill="#4D7C0F" font-family="JetBrains Mono,Consolas,monospace" font-size="18" font-weight="700">$ prompt-eval-seed</text>
-    <text x="42" y="112" fill="#16A34A" font-family="JetBrains Mono,Consolas,monospace" font-size="18">PASS</text>
-    <text x="120" y="112" fill="#111827" font-family="JetBrains Mono,Consolas,monospace" font-size="18">score gate</text>
-    <text x="42" y="154" fill="#16A34A" font-family="JetBrains Mono,Consolas,monospace" font-size="18">PASS</text>
-    <text x="120" y="154" fill="#111827" font-family="JetBrains Mono,Consolas,monospace" font-size="18">sarif output</text>
-    <text x="42" y="196" fill="#F59E0B" font-family="JetBrains Mono,Consolas,monospace" font-size="18">WARN</text>
-    <text x="120" y="196" fill="#111827" font-family="JetBrains Mono,Consolas,monospace" font-size="18">missing signal</text>
+  <g filter="url(#shadow)">
+    <rect x="72" y="76" width="1136" height="368" rx="28" fill="#0B1220" stroke="#263244"/>
+    <rect x="96" y="100" width="1088" height="320" rx="22" fill="#0F172A" stroke="#1E293B"/>
   </g>
 
-  <text x="134" y="406" fill="#64748B" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16">GitHub + Gitee mirrored · CI ready · SARIF · annotations · bilingual docs</text>
+  <g transform="translate(128 132)">
+    <rect width="188" height="188" rx="36" fill="#111827" stroke="#334155"/>
+    <rect x="18" y="18" width="152" height="152" rx="30" fill="#0284C7" opacity=".14"/>
+    <path d="M48 64h128v78H86l-38 32V64Z" stroke="#BAE6FD" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><path d="M78 96h70M78 124h46" stroke="#BAE6FD" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g transform="translate(356 128)">
+    <text x="0" y="38" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="48" font-weight="850">Prompt Eval Seed</text>
+    <text x="0" y="76" fill="#94A3B8" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="500">Check prompt regression seed files for inputs,</text>
+    <text x="0" y="106" fill="#64748B" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="18" font-weight="500">expected output, failure cases, and safet...</text>
+    <g transform="translate(0 138)">
+      <rect width="122" height="36" rx="18" fill="#BAE6FD"/>
+      <text x="26" y="24" fill="#020617" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="850">v0.1.1</text>
+      <rect x="136" width="118" height="36" rx="18" fill="#1E293B" stroke="#334155"/>
+      <text x="162" y="24" fill="#E2E8F0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="760">zero deps</text>
+      <rect x="268" width="108" height="36" rx="18" fill="#1E293B" stroke="#334155"/>
+      <text x="293" y="24" fill="#E2E8F0" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="760">CI ready</text>
+    </g>
+    <text x="0" y="234" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17">AI-ready checks · mirrored release · bilingual docs</text>
+    <text x="0" y="266" fill="#64748B" font-family="JetBrains Mono,Consolas,monospace" font-size="15">prompt-eval-seed</text>
+  </g>
+
+  <g transform="translate(780 134)">
+    <rect width="360" height="214" rx="20" fill="#020617" stroke="#334155"/>
+    <rect x="0" y="0" width="360" height="44" rx="20" fill="#111827"/>
+    <circle cx="26" cy="22" r="6" fill="#F87171"/>
+    <circle cx="48" cy="22" r="6" fill="#FBBF24"/>
+    <circle cx="70" cy="22" r="6" fill="#34D399"/>
+    <text x="24" y="78" fill="#BAE6FD" font-family="JetBrains Mono,Consolas,monospace" font-size="15" font-weight="700">$ github:aolingge/prompt-eval-seed --pat...</text>
+    <text x="24" y="118" fill="#34D399" font-family="JetBrains Mono,Consolas,monospace" font-size="15" font-weight="700">PASS</text>
+    <text x="92" y="118" fill="#E5E7EB" font-family="JetBrains Mono,Consolas,monospace" font-size="15">input cases present</text>
+    <text x="24" y="152" fill="#34D399" font-family="JetBrains Mono,Consolas,monospace" font-size="15" font-weight="700">PASS</text>
+    <text x="92" y="152" fill="#E5E7EB" font-family="JetBrains Mono,Consolas,monospace" font-size="15">safety notes found</text>
+    <text x="24" y="186" fill="#FBBF24" font-family="JetBrains Mono,Consolas,monospace" font-size="15" font-weight="700">NOTE</text>
+    <text x="92" y="186" fill="#CBD5E1" font-family="JetBrains Mono,Consolas,monospace" font-size="15">regression seeds ready</text>
+  </g>
 </svg>
