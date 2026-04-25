@@ -1,0 +1,31 @@
+{
+  "name": "prompt-eval-seed",
+  "version": "0.1.0",
+  "description": "Check prompt regression seed files for inputs, expected output, failure cases, and safety notes.",
+  "type": "module",
+  "bin": {
+    "prompt-eval-seed": "./src/cli.js"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "node src/cli.js --path fixtures/good.txt --min-score 75"
+  },
+  "keywords": [
+    "prompt-evaluation",
+    "prompt-engineering",
+    "evals",
+    "ai-agent",
+    "developer-tools",
+    "cli"
+  ],
+  "author": "Aolingge",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aolingge/prompt-eval-seed.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aolingge/prompt-eval-seed/issues"
+  },
+  "homepage": "https://github.com/aolingge/prompt-eval-seed"
+}

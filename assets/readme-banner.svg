@@ -1,0 +1,16 @@
+<svg width="1280" height="480" viewBox="0 0 1280 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="480" fill="#0F172A"/>
+  <rect x="70" y="62" width="1140" height="356" rx="24" fill="#F8FAFC"/>
+  <circle cx="180" cy="152" r="58" fill="#84CC16" opacity=".18"/>
+  <rect x="126" y="118" width="430" height="244" rx="18" fill="#111827"/>
+  <text x="164" y="176" fill="#F8FAFC" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="30" font-weight="800">Prompt Eval Seed</text>
+  <text x="164" y="220" fill="#CBD5E1" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="17">Zero-dependency AI agent CLI</text>
+  <rect x="164" y="266" width="120" height="36" rx="18" fill="#84CC16"/>
+  <text x="190" y="290" fill="#0F172A" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700">score 100</text>
+  <g font-family="JetBrains Mono,Consolas,monospace" font-size="20">
+    <text x="650" y="150" fill="#16A34A">PASS</text><text x="730" y="150" fill="#111827">input</text>
+    <text x="650" y="205" fill="#16A34A">PASS</text><text x="730" y="205" fill="#111827">expected</text>
+    <text x="650" y="260" fill="#F59E0B">WARN</text><text x="730" y="260" fill="#111827">negative</text>
+    <text x="650" y="315" fill="#EF4444">FAIL</text><text x="730" y="315" fill="#111827">safety</text>
+  </g>
+</svg>

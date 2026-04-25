@@ -1,0 +1,4 @@
+input: sample diff
+expected: flags missing tests
+negative: ignores style-only noise
+safety: redact secrets
