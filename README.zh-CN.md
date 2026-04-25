@@ -64,3 +64,12 @@ Good first PRs: add checks, add fixtures, improve docs, or add GitHub Actions ex
 ## License
 
 MIT
+
+
+## Quality Gate
+
+Use this project as a repeatable gate before an AI agent marks work as done:
+
+- [Quality gate guide](docs/quality-gates.md)
+- [Copy-ready GitHub Actions example](examples/github-action.yml)
+
