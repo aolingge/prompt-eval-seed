@@ -33,8 +33,7 @@ export function redactText(text) {
   return text.replace(secretPattern, '[REDACTED_SECRET]')
 }
 
-export function checkFile(file) {
-  const text = fs.readFileSync(file, 'utf8')
+export function checkText(text, file = '<inline>') {
   const results = checks.map((check) => {
     const ok = testPattern(text, check.pattern)
     return {
@@ -45,6 +44,11 @@ export function checkFile(file) {
   })
   const score = Math.round((results.filter((item) => item.status === 'PASS').length / results.length) * 100)
   return { file, score, results, redacted: redactText(text) }
+}
+
+export function checkFile(file) {
+  const text = fs.readFileSync(file, 'utf8')
+  return checkText(text, file)
 }
 
 export function formatText(report, title = "Prompt Eval Seed") {
@@ -67,4 +71,49 @@ File: \`${report.file}\`
 | --- | --- | --- |
 ${rows}
 `
+}
+
+export function formatAnnotations(report) {
+  return report.results
+    .filter((result) => result.status !== 'PASS')
+    .map((result) => `::warning file=${report.file},title=${result.check}::${result.message.replaceAll('\n', ' ')}`)
+    .join('\n')
+}
+
+export function formatSarif(report, toolName = "prompt-eval-seed") {
+  return {
+    version: '2.1.0',
+    $schema: 'https://json.schemastore.org/sarif-2.1.0.json',
+    runs: [
+      {
+        tool: {
+          driver: {
+            name: toolName,
+            informationUri: `https://github.com/aolingge/${toolName}`,
+            rules: report.results.map((result) => ({
+              id: result.check,
+              name: result.check,
+              shortDescription: { text: result.message },
+              defaultConfiguration: { level: result.status === 'FAIL' ? 'warning' : 'note' },
+            })),
+          },
+        },
+        results: report.results
+          .filter((result) => result.status !== 'PASS')
+          .map((result) => ({
+            ruleId: result.check,
+            level: 'warning',
+            message: { text: result.message },
+            locations: [
+              {
+                physicalLocation: {
+                  artifactLocation: { uri: report.file.replaceAll('\\', '/') },
+                  region: { startLine: 1 },
+                },
+              },
+            ],
+          })),
+      },
+    ],
+  }
 }

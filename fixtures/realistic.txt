@@ -1,0 +1,8 @@
+input: sample diff
+expected: flags missing tests
+negative: ignores style-only noise
+safety: redact secrets
+
+# Realistic extension
+
+This fixture is safe to share and contains no real secrets.

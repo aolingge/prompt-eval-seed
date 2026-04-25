@@ -53,6 +53,27 @@ PASS  example-check  Useful signal found
 FAIL  missing-check  Add the missing guidance
 ```
 
+## CI Usage
+
+Use GitHub Actions annotations:
+
+```bash
+npx github:aolingge/prompt-eval-seed --path fixtures/good.txt --annotations
+```
+
+Generate SARIF:
+
+```bash
+npx github:aolingge/prompt-eval-seed --path fixtures/good.txt --sarif > results.sarif
+```
+
+See [docs/github-actions.md](docs/github-actions.md).
+
+## Mirrors
+
+- GitHub: https://github.com/aolingge/prompt-eval-seed
+- Gitee: https://gitee.com/aolingge/prompt-eval-seed
+
 ## Contributing
 
 Good first PRs: add checks, add fixtures, improve docs, or add GitHub Actions examples.
