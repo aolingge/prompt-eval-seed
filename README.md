@@ -40,7 +40,28 @@ Use a score gate:
 npx github:aolingge/prompt-eval-seed --path eval.yml --min-score 80
 ```
 
+Choose a focused profile when you want this repo to replace one of the smaller prompt tools:
+
+```bash
+npx github:aolingge/prompt-eval-seed --path review.prompt.yml --profile yaml
+npx github:aolingge/prompt-eval-seed --path prompt.txt --profile injection
+npx github:aolingge/prompt-eval-seed --path fixtures/ --profile fixture-pack
+npx github:aolingge/prompt-eval-seed --path report.md --profile regression-report
+```
+
+## Profiles
+
+| Profile | Replaces small tool | Best for |
+| --- | --- | --- |
+| core | prompt-eval-seed | Prompt regression seed files. |
+| yaml | prompt-yaml-lint | Prompt-as-code YAML readiness. |
+| injection | prompt-injection-smoke | Prompt-injection smoke checks. |
+| fixture-pack | prompt-fixture-pack | Fixture set coverage. |
+| regression-report | prompt-regression-report | Regression report completeness. |
+
 ## Checks
+
+The default `core` profile checks:
 
 | Check | What it looks for |
 | --- | --- |
