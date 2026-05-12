@@ -1,0 +1,11 @@
+name: pr-review
+description: Review a pull request for bugs, security issues, and missing tests.
+model: gpt-5.2
+inputs:
+  diff:
+    description: Pull request diff
+prompt: |
+  Review the diff. Report only actionable issues with file and line references.
+tests:
+  - name: flags missing test
+    expected: Mentions missing coverage for changed behavior.

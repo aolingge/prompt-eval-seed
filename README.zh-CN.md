@@ -40,7 +40,28 @@ Use a score gate:
 npx github:aolingge/prompt-eval-seed --path eval.yml --min-score 80
 ```
 
+需要替代原来的 prompt 小工具时，可以选择更聚焦的 profile：
+
+```bash
+npx github:aolingge/prompt-eval-seed --path review.prompt.yml --profile yaml
+npx github:aolingge/prompt-eval-seed --path prompt.txt --profile injection
+npx github:aolingge/prompt-eval-seed --path fixtures/ --profile fixture-pack
+npx github:aolingge/prompt-eval-seed --path report.md --profile regression-report
+```
+
+## Profiles
+
+| Profile | 可替代的小工具 | 适合检查 |
+| --- | --- | --- |
+| core | prompt-eval-seed | Prompt 回归种子文件。 |
+| yaml | prompt-yaml-lint | Prompt-as-code YAML 准备度。 |
+| injection | prompt-injection-smoke | Prompt injection 冒烟检查。 |
+| fixture-pack | prompt-fixture-pack | Fixture 集合覆盖度。 |
+| regression-report | prompt-regression-report | 回归报告完整性。 |
+
 ## 检查项
+
+默认 `core` profile 检查：
 
 | Check | What it looks for |
 | --- | --- |
@@ -72,4 +93,3 @@ Use this project as a repeatable gate before an AI agent marks work as done:
 
 - [Quality gate guide](docs/quality-gates.md)
 - [Copy-ready GitHub Actions example](examples/github-action.yml)
-
